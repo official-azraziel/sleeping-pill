@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Surprise 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <!-- Screen 1: Enter her name -->
+    <section class="screen active" id="nameScreen">
+      <div class="card">
+        <div class="heart">💗</div>
+        <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+        <h1>Hello, beautiful!</h1>
+        <p class="description">Before we begin, tell me your lovely name. 💕</p>
+
+        <form id="nameForm">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter your name..."
+            autocomplete="given-name"
+            maxlength="40"
+            required
+          >
+          <button class="primary-button" type="submit">Continue 💌</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Screen 2: Ten-second loading screen -->
+    <section class="screen" id="loadingScreen">
+      <div class="card">
+        <div class="heart heartbeat">💖</div>
+        <h1>Preparing something special...</h1>
+        <p class="description" id="loadingMessage">
+          Sprinkling some extra love... 🌷
+        </p>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Preparing your surprise"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+          id="progressTrack"
+        >
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="percentage" id="percentage">0%</p>
+      </div>
+    </section>
+
+    <!-- Screen 3: The question -->
+    <section class="screen" id="questionScreen">
+      <div class="card question-card">
+        <img
+          src="cutie.png"
+          alt="cutie"
+          class="girlfriend-photo"
+        >
+
+        <p class="eyebrow">JUST ONE LITTLE QUESTION</p>
+        <h1 id="greeting">Hey, beautiful! 💕</h1>
+        <p class="description">
+          Are you ready to tell him a bedtime story tonight? 🌙✨
+        </p>
+
+        <div class="yes-area">
+          <button class="primary-button" id="yesButton" type="button">
+            Yes, of course! 💖
+          </button>
+        </div>
+
+        <p class="tiny-note">Choose wisely, po mam. Hehe! 🙈</p>
+      </div>
+    </section>
+
+    <!-- Screen 4: Happy ending -->
+    <section class="screen" id="finalScreen">
+      <div class="card">
+        <div class="heart heartbeat">💘</div>
+        <p class="eyebrow">A LITTLE REMINDER</p>
+        <h1>OMG WE KNEW IT!</h1>
+        <p class="description" id="finalMessage"></p>
+        <div class="love-note">
+          You make his world a little more beautiful 💕
+        </div>
+        <button class="primary-button" id="restartButton" type="button">
+          Start again 🌷
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Separate floating No button: stays inside the visible browser window -->
+  <div class="no-button-layer" id="noButtonLayer" aria-hidden="true">
+    <button class="no-button" id="noButton" type="button" tabindex="-1">
+      No 🙈
+    </button>
+  </div>
+
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
